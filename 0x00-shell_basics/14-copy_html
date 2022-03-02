@@ -1,2 +1,2 @@
 #!/bin/bash
-cp HTML*.html 0x00-shell_basics
+find myDir -name '*.html' -print0 | xargs -0 -J % cp % ~/otherdir
