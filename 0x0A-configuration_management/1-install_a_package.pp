@@ -1,4 +1,6 @@
-# install puppet-lint -v 2.1.0
-exec { 'puppet-lint':
-  command => '/usr/bin/apt-get -y install puppet-lint -v 2.5.0',
-}
+# Installing a package with a particular version
+package { 'puppet-lint':
+  ensure   => '2.5.0',
+  provider => gem;
+  }
+  
